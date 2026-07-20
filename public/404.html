@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Redirecting...</title>
+    <meta http-equiv="refresh" content="0; url=/pathweaver/" />
+    <script>
+      // Preserve the original path for SPA routing
+      const path = window.location.pathname.replace(/^\/pathweaver\//, "");
+      window.location.replace(`/pathweaver/${path}`);
+    </script>
+  </head>
+  <body></body>
+</html>
