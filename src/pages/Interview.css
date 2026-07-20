@@ -1,0 +1,354 @@
+.interview-page {
+  animation: fadeIn 0.4s ease;
+}
+
+.interview-tabs {
+  margin-bottom: 1.5rem;
+  overflow-x: auto;
+  max-width: 100%;
+}
+
+.tab-count {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.15);
+  padding: 2px 6px;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  margin-left: 6px;
+}
+
+.tab:not(.active) .tab-count {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.tips-panel {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  background: rgba(139, 92, 246, 0.1);
+  border: 1px solid rgba(139, 92, 246, 0.2);
+  padding: 1.25rem 1.5rem;
+  border-radius: var(--radius-lg);
+  margin-bottom: 2rem;
+}
+
+.tips-icon-wrapper {
+  color: var(--yellow);
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(245, 158, 11, 0.1);
+  padding: 0.5rem;
+  border-radius: 50%;
+}
+
+.tips-content {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.tips-content strong {
+  color: var(--text-primary);
+}
+
+.progress-banner {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding: 1.5rem 2rem;
+  margin-bottom: 2rem;
+}
+
+.progress-banner-info {
+  display: flex;
+  gap: 2rem;
+  flex-shrink: 0;
+}
+
+.stat-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.stat-value {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1.2;
+}
+
+.stat-label {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.progress-banner-bar {
+  flex-grow: 1;
+}
+
+.progress-banner-pct {
+  font-weight: 600;
+  color: var(--purple-light);
+  flex-shrink: 0;
+  min-width: 120px;
+  text-align: right;
+}
+
+.question-card {
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+  height: 100%;
+}
+
+.question-card.is-answered {
+  border-color: rgba(16, 185, 129, 0.3);
+  background: linear-gradient(135deg, var(--bg-card), rgba(16, 185, 129, 0.03));
+}
+
+.question-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+.question-tags {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.bookmark-btn {
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: all var(--transition);
+  padding: 0.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bookmark-btn:hover {
+  color: var(--text-primary);
+  transform: scale(1.1);
+}
+
+.bookmark-btn.bookmarked {
+  color: var(--yellow);
+}
+
+.question-title {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  color: var(--text-primary);
+  flex-grow: 1;
+}
+
+.question-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border);
+  margin-top: auto;
+}
+
+.toggle-answer {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  padding: 0.5rem;
+  color: var(--purple-light);
+}
+
+.mark-answered {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  padding: 0.5rem;
+}
+
+.mark-answered.active {
+  color: var(--green);
+}
+
+.answer-section {
+  margin-top: 1.25rem;
+  animation: fadeIn 0.3s ease;
+}
+
+.answer-section label {
+  display: block;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.answer-section textarea {
+  resize: vertical;
+}
+
+/* Mock Interview Overlay */
+.mock-interview-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(10, 10, 15, 0.95);
+  backdrop-filter: blur(8px);
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  animation: fadeIn 0.3s ease;
+}
+
+.mock-container {
+  width: 100%;
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  height: 90vh;
+}
+
+.mock-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.mock-progress-text {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.mock-timer {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: var(--bg-card);
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--radius-full);
+  border: 1px solid var(--border);
+  font-size: 1.5rem;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  box-shadow: var(--shadow-purple);
+}
+
+.mock-timer.urgent {
+  color: var(--red);
+  border-color: rgba(239, 68, 68, 0.5);
+  box-shadow: 0 0 20px rgba(239, 68, 68, 0.2);
+  animation: pulse-glow 2s infinite;
+}
+
+.mock-end-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.mock-card {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 2.5rem;
+  overflow-y: auto;
+}
+
+.mock-card-content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.mock-tags {
+  display: flex;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.mock-question {
+  font-size: 1.8rem;
+  line-height: 1.4;
+  margin-bottom: 2rem;
+  color: var(--text-primary);
+}
+
+.mock-textarea {
+  flex-grow: 1;
+  min-height: 200px;
+  background: var(--bg-primary);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  color: var(--text-primary);
+  font-size: 1.1rem;
+  resize: none;
+  transition: all var(--transition);
+  font-family: inherit;
+}
+
+.mock-textarea:focus {
+  outline: none;
+  border-color: var(--purple-primary);
+  box-shadow: 0 0 0 2px rgba(139, 92, 246, 0.15);
+}
+
+.mock-actions {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border);
+}
+
+@media (max-width: 768px) {
+  .progress-banner {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1.5rem;
+  }
+  
+  .progress-banner-info {
+    justify-content: space-between;
+  }
+  
+  .progress-banner-pct {
+    text-align: left;
+  }
+  
+  .mock-header {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  
+  .mock-timer {
+    order: -1;
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .mock-card {
+    padding: 1.5rem;
+  }
+  
+  .mock-question {
+    font-size: 1.4rem;
+  }
+}
